@@ -1,9 +1,11 @@
-[18.07.2026 20:17] Legenda: local player = game.Players.LocalPlayer
+[18.07.2026 20:33] Legenda: local player = game.Players.LocalPlayer
 local mouse = player:GetMouse()
 local settings = {WH = true, SkillCheck = true}
 
 local function waitForRound()
-    while not player.Character or not player.Character:FindFirstChild("Humanoid") do wait(0.5) end
+    while not player.Character or not player.Character:FindFirstChild("Humanoid") do
+        wait(0.5)
+    end
     wait(1)
 end
 waitForRound()
@@ -102,7 +104,7 @@ game:GetService("RunService").Heartbeat:Connect(function()
         for _, plr in pairs(game.Players:GetChildren()) do
             if plr ~= player and plr.Character and plr.Character.Head then
                 for _, v in pairs(plr.Character.Head:GetChildren()) do
-[18.07.2026 20:17] Legenda: if v:IsA("BillboardGui") and v.Name == "RyzenESP" then v:Destroy() end
+[18.07.2026 20:33] Legenda: if v:IsA("BillboardGui") and v.Name == "RyzenESP" then v:Destroy() end
                 end
             end
         end
